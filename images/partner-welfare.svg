@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <rect width="200" height="80" fill="white"/>
+  <text x="100" y="28" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#1B2A4A" text-anchor="middle">משרד הרווחה</text>
+  <text x="100" y="46" font-family="Arial, sans-serif" font-size="10" fill="#4a5568" text-anchor="middle">והביטחון החברתי</text>
+  <line x1="30" y1="58" x2="170" y2="58" stroke="#2EC4B6" stroke-width="2"/>
+  <text x="100" y="72" font-family="Arial, sans-serif" font-size="9" fill="#2EC4B6" text-anchor="middle">Ministry of Social Affairs</text>
+</svg>
