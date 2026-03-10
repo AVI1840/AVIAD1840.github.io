@@ -1,0 +1,12 @@
+node_modules/
+*.docx
+~$*
+.DS_Store
+Thumbs.db
+
+# קבצי עבודה
+אתר אישי/
+pp.py
+inject_links.py
+build-cv-ai-v2.js
+prompt-for-claude-v2.md
