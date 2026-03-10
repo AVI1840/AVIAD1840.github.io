@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>קורות חיים | אביעד יצחקי</title>
+  <meta name="description" content="קורות חיים – אביעד יצחקי, מנהל בכיר, הובלת שינוי, אסטרטגיה ו-AI בשירות הציבורי">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Heebo:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1B2A4A;
+      --primary-light: #2a3d66;
+      --secondary: #2EC4B6;
+      --text: #333333;
+      --text-muted: #999999;
+      --bg-white: #FFFFFF;
+      --bg-light: #F8F9FA;
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 8px 24px rgba(0,0,0,0.12);
+      --transition: all 0.25s ease;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Assistant', sans-serif; background: var(--bg-light); color: var(--text); direction: rtl; min-height: 100vh; }
+
+    /* TOP BAR */
+    .topbar { background: var(--primary); padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .topbar-back { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.8); font-family: 'Heebo', sans-serif; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: var(--transition); }
+    .topbar-back:hover { color: var(--secondary); }
+    .topbar-title { color: white; font-family: 'Heebo', sans-serif; font-size: 1rem; font-weight: 800; }
+    .topbar-actions { display: flex; gap: 10px; }
+    .btn-dl { display: inline-flex; align-items: center; gap: 7px; background: var(--secondary); color: var(--primary); padding: 9px 20px; border-radius: 50px; font-family: 'Heebo', sans-serif; font-size: 0.88rem; font-weight: 700; text-decoration: none; transition: var(--transition); border: none; cursor: pointer; }
+    .btn-dl:hover { background: #4dd8cc; transform: translateY(-1px); }
+    .btn-print { display: inline-flex; align-items: center; gap: 7px; background: transparent; color: rgba(255,255,255,0.85); padding: 9px 18px; border-radius: 50px; font-family: 'Heebo', sans-serif; font-size: 0.88rem; font-weight: 600; border: 1.5px solid rgba(255,255,255,0.35); cursor: pointer; transition: var(--transition); }
+    .btn-print:hover { border-color: var(--secondary); color: var(--secondary); }
+
+    /* CV WRAPPER */
+    .cv-wrap { max-width: 860px; margin: 32px auto; padding: 0 16px 48px; }
+    .cv-page { background: var(--bg-white); border-radius: var(--radius-md); box-shadow: var(--shadow-md); overflow: hidden; }
+
+    /* CV HEADER */
+    .cv-header { background: var(--primary); color: white; padding: 44px 52px 36px; position: relative; }
+    .cv-header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--secondary), #F4A261); }
+    .cv-name { font-family: 'Heebo', sans-serif; font-size: 2.4rem; font-weight: 900; margin-bottom: 6px; }
+    .cv-title { font-size: 1rem; color: rgba(255,255,255,0.78); font-weight: 400; margin-bottom: 22px; }
+    .cv-contact-row { display: flex; flex-wrap: wrap; gap: 14px; font-size: 0.83rem; color: rgba(255,255,255,0.72); }
+    .cv-contact-row a { color: rgba(255,255,255,0.88); text-decoration: underline; }
+
+    /* CV BODY */
+    .cv-body { padding: 44px 52px; }
+    .cv-section-block { margin-bottom: 38px; }
+    .cv-section-title { font-family: 'Heebo', sans-serif; font-size: 0.78rem; font-weight: 800; color: var(--primary); border-bottom: 2px solid var(--secondary); padding-bottom: 6px; margin-bottom: 20px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .cv-summary { font-size: 0.95rem; line-height: 1.85; color: var(--text); }
+
+    /* STATS */
+    .cv-stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .cv-stat { background: var(--bg-light); border-radius: var(--radius-sm); padding: 16px; text-align: center; }
+    .cv-stat-num { font-family: 'Heebo', sans-serif; font-size: 1.45rem; font-weight: 900; color: var(--secondary); direction: ltr; }
+    .cv-stat-label { font-size: 0.72rem; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    /* JOBS */
+    .cv-job { margin-bottom: 26px; padding-bottom: 26px; border-bottom: 1px solid #f0f0f0; }
+    .cv-job:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .cv-job-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 5px; flex-wrap: wrap; gap: 4px; }
+    .cv-job-title { font-family: 'Heebo', sans-serif; font-size: 1rem; font-weight: 700; color: var(--primary); }
+    .cv-job-date { font-size: 0.8rem; color: var(--secondary); font-weight: 600; white-space: nowrap; background: rgba(46,196,182,0.1); padding: 3px 10px; border-radius: 20px; }
+    .cv-job-org { font-size: 0.87rem; color: var(--text-muted); margin-bottom: 12px; font-weight: 500; }
+    .cv-bullets { list-style: none; padding: 0; }
+    .cv-bullets li { font-size: 0.89rem; color: var(--text); line-height: 1.75; padding-right: 18px; position: relative; margin-bottom: 5px; }
+    .cv-bullets li::before { content: '◆'; position: absolute; right: 0; color: var(--secondary); font-size: 0.55rem; top: 7px; }
+
+    /* EDUCATION */
+    .cv-edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .cv-edu-item { background: var(--bg-light); border-radius: var(--radius-sm); padding: 16px 20px; border-right: 3px solid var(--secondary); }
+    .cv-edu-degree { font-size: 0.92rem; font-weight: 700; color: var(--primary); margin-bottom: 3px; }
+    .cv-edu-school { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px; }
+    .cv-edu-honors { font-size: 0.77rem; color: var(--secondary); font-weight: 600; }
+
+    /* SKILLS */
+    .cv-skills-group { margin-bottom: 14px; }
+    .cv-skills-label { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); margin-bottom: 8px; }
+    .cv-skills-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .cv-skill-tag { background: rgba(46,196,182,0.12); color: var(--primary); padding: 5px 13px; border-radius: 20px; font-size: 0.79rem; font-weight: 600; }
+
+    /* RECOMMENDATIONS */
+    .cv-rec { background: var(--bg-light); border-right: 3px solid var(--secondary); padding: 16px 18px; margin-bottom: 14px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; font-size: 0.87rem; font-style: italic; color: var(--text); line-height: 1.7; }
+    .cv-rec:last-child { margin-bottom: 0; }
+    .cv-rec-author { font-style: normal; font-weight: 700; color: var(--primary); font-size: 0.81rem; margin-top: 8px; }
+
+    /* DOWNLOAD BAR */
+    .cv-download-bar { display: flex; gap: 14px; justify-content: center; padding: 28px; background: var(--bg-light); border-top: 1px solid #eee; flex-wrap: wrap; }
+
+    @media (max-width: 700px) {
+      .cv-header { padding: 28px 22px; }
+      .cv-body { padding: 28px 22px; }
+      .cv-stats-grid { grid-template-columns: repeat(2,1fr); }
+      .cv-edu-grid { grid-template-columns: 1fr; }
+      .cv-job-header { flex-direction: column; }
+      .topbar { flex-wrap: wrap; gap: 10px; }
+    }
+    @media print {
+      .topbar, .cv-download-bar { display: none !important; }
+      body { background: white; }
+      .cv-wrap { margin: 0; padding: 0; max-width: 100%; }
+      .cv-page { box-shadow: none; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <a href="index.html" class="topbar-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      חזרה לאתר
+    </a>
+    <div class="topbar-title">קורות חיים – אביעד יצחקי</div>
+    <div class="topbar-actions">
+      <a href="קורות-חיים-אביעד-יצחקי-2026.docx" download class="btn-dl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        הורד Word
+      </a>
+      <button onclick="window.print()" class="btn-print">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        PDF / הדפסה
+      </button>
+    </div>
+  </div>
+
+  <div class="cv-wrap">
+    <div class="cv-page">
+
+      <!-- HEADER -->
+      <div class="cv-header">
+        <div class="cv-name">אביעד יצחקי</div>
+        <div class="cv-title">הובלת שינוי | אסטרטגיה | טרנספורמציה דיגיטלית | AI בשירות הציבורי</div>
+        <div class="cv-contact-row">
+          <span>📧 <a href="mailto:Aviad1840@gmail.com">Aviad1840@gmail.com</a></span>
+          <span>📱 <a href="tel:0503666160">050-3666160</a></span>
+          <span>📍 כפר אלדד</span>
+          <span>🎂 יליד 1984</span>
+          <span>🔗 <a href="https://www.linkedin.com/in/aviad-itzhaky-930b03254/" target="_blank" rel="noopener">LinkedIn</a></span>
+        </div>
+      </div>
+
+      <div class="cv-body">
+
+        <!-- תקציר -->
+        <div class="cv-section-block">
+          <div class="cv-section-title">תקציר מקצועי</div>
+          <p class="cv-summary">מנהל בכיר עם למעלה מ-15 שנות ניסיון בהובלת טרנספורמציה ארגונית וממשלתית, ניהול תקציבי ענק, יזמות, ופיתוח שירותים לאומיים. מומחיות ייחודית בתרגום חזון אסטרטגי לתוצאות מדידות בשטח. בעל רקורד מוכח בהקמת מנגנונים מאפס, הובלת רפורמות לאומיות, ובניית שותפויות בין-ארגוניות מורכבות. בשנים האחרונות מוביל את הטמעת ה-AI העסקי בביטוח לאומי עם 11 פרויקטים פעילים. משלב ארבע יכולות ליבה נדירות: ניהול תקציבי ענק, חשיבה אסטרטגית ותכנון מדיניות, הובלת חדשנות דיגיטלית ו-AI, ובניית שותפויות רוחביות שמניעות שינוי אמיתי.</p>
+        </div>
+
+        <!-- מספרים -->
+        <div class="cv-section-block">
+          <div class="cv-section-title">מספרים מרכזיים</div>
+          <div class="cv-stats-grid">
+            <div class="cv-stat"><div class="cv-stat-num">700M ₪</div><div class="cv-stat-label">תקציב שנתי שנוהל</div></div>
+            <div class="cv-stat"><div class="cv-stat-num">11</div><div class="cv-stat-label">פרויקטי AI פעילים</div></div>
+            <div class="cv-stat"><div class="cv-stat-num">98%</div><div class="cv-stat-label">רשויות ברפורמת הביזור</div></div>
+            <div class="cv-stat"><div class="cv-stat-num">200,000</div><div class="cv-stat-label">אזרחים שהכלים מכוונים אליהם</div></div>
+            <div class="cv-stat"><div class="cv-stat-num">12</div><div class="cv-stat-label">משרדי ממשלה בתיאום רוחבי</div></div>
+            <div class="cv-stat"><div class="cv-stat-num">10M+ ₪</div><div class="cv-stat-label">גיוס פילנתרופי כמנכ"ל</div></div>
+          </div>
+        </div>
+
+        <!-- ניסיון -->
+        <div class="cv-section-block">
+          <div class="cv-section-title">ניסיון מקצועי</div>
+
+          <div class="cv-job">
+            <div class="cv-job-header">
+              <div class="cv-job-title">מוביל פיתוח עסקי, חדשנות ו-AI</div>
+              <div class="cv-job-date">2025 – היום</div>
+            </div>
+            <div class="cv-job-org">ביטוח לאומי – הארגון הסוציאלי הגדול בישראל</div>
+            <ul class="cv-bullets">
+              <li>הובלת 11 פרויקטי AI עסקי: מיצוי זכויות, ארנק זכויות, בוט סיכום תביעות, דשבורד פערי גמלאות</li>
+              <li>הקמת תוכנית 4x4: הכשרת 30 מנהלים שבנו 40 בוטים</li>
+              <li>פיתוח פורטל AI ל-1,500+ עובדים | כנס AI ממשלתי בין-משרדי</li>
+              <li>"המקפצה" – מודל AI תעסוקתי ל-400,000+ אזרחים</li>
+            </ul>
+          </div>
+
+          <div class="cv-job">
+            <div class="cv-job-header">
+              <div class="cv-job-title">ראש אגף תכנון, מדיניות ואסטרטגיה (מייסד)</div>
+              <div class="cv-job-date">2022 – 2024</div>
+            </div>
+            <div class="cv-job-org">משרד הרווחה והביטחון החברתי</div>
+            <ul class="cv-bullets">
+              <li>הקמת אגף אסטרטגיה חדש – מנגנון תכנון מדיניות ותיאום בין-משרדי</li>
+              <li>"פורום ברק" – תיאום לאומי, 12 משרדי ממשלה, אסטרטגיה להזדקנות</li>
+              <li>רפורמת ביזור (החלטת ממשלה 675) – 98% מהרשויות במודל החדש</li>
+              <li>עבודה ישירה מול משרד רה"מ, אגף התקציבים ומשרד הבריאות</li>
+            </ul>
+          </div>
+
+          <div class="cv-job">
+            <div class="cv-job-header">
+              <div class="cv-job-title">ראש אגף תקציבים</div>
+              <div class="cv-job-date">2020 – 2022</div>
+            </div>
+            <div class="cv-job-org">משרד הרווחה – מינהל אזרחים ותיקים + מינהל טד"מ</div>
+            <ul class="cv-bullets">
+              <li>ניהול תקציב 700M ₪ – הכפלת תקציב הקהילה תוך 3 שנים</li>
+              <li>אופרציית חירום קורונה: 90M ₪, 21 פרויקטים לאומיים – "מגן זהב" – מענה לכ-500,000 אזרחים ותיקים</li>
+              <li>רפורמת מרכזי היום – שינוי מודל, גיוס 30 מש"ח מהאוצר</li>
+              <li>קידום מערכות דאטה ודיגיטל בשותפות עם הג'וינט וישראל דיגיטלית</li>
+            </ul>
+          </div>
+
+          <div class="cv-job">
+            <div class="cv-job-header">
+              <div class="cv-job-title">מנכ"ל ומייסד – "דרישה ישראל"</div>
+              <div class="cv-job-date">2016 – 2020</div>
+            </div>
+            <div class="cv-job-org">הישיבה לנשים הראשונה בעולם</div>
+            <ul class="cv-bullets">
+              <li>הקמת ארגון מאפס: חזון, תקציב, צוות, תשתיות, קמפוס</li>
+              <li>גיוס 10M+ ₪ מפילנתרופיה | ניהול 15 עובדים</li>
+              <li>ממשקים: ארגון אם בארה"ב, מועצה אזורית, משרדי ממשלה</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- השכלה -->
+        <div class="cv-section-block">
+          <div class="cv-section-title">השכלה</div>
+          <div class="cv-edu-grid">
+            <div class="cv-edu-item">
+              <div class="cv-edu-degree">M.A כלכלה יישומית</div>
+              <div class="cv-edu-school">המכללה למנהל | 2020–2022</div>
+              <div class="cv-edu-honors">הצטיינות יתרה (95) | מצטיין דיקן</div>
+            </div>
+            <div class="cv-edu-item">
+              <div class="cv-edu-degree">M.A ניהול מלכ"ר</div>
+              <div class="cv-edu-school">האוניברסיטה העברית | 2010–2012</div>
+              <div class="cv-edu-honors">בהצטיינות</div>
+            </div>
+            <div class="cv-edu-item">
+              <div class="cv-edu-degree">B.A מנהל עסקים</div>
+              <div class="cv-edu-school">מכון לנדר | 2006–2009</div>
+              <div class="cv-edu-honors">בהצטיינות | מצטיין שנתי 2009</div>
+            </div>
+            <div class="cv-edu-item">
+              <div class="cv-edu-degree">תוכניות מנהיגות</div>
+              <div class="cv-edu-school">בוגר "זמן עתיד" – עתודה רב-מערכתית להזדקנות</div>
+              <div class="cv-edu-honors">בוגר "תפנית" – עתודה ניהולית בכירה, מחזור א'</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- יכולות -->
+        <div class="cv-section-block">
+          <div class="cv-section-title">יכולות מרכזיות</div>
+          <div class="cv-skills-group">
+            <div class="cv-skills-label">AI ודיגיטל</div>
+            <div class="cv-skills-row">
+              <span class="cv-skill-tag">GPT / Claude / Gemini</span>
+              <span class="cv-skill-tag">AI Prompting</span>
+              <span class="cv-skill-tag">React</span>
+              <span class="cv-skill-tag">TypeScript</span>
+              <span class="cv-skill-tag">Node.js</span>
+              <span class="cv-skill-tag">RAG</span>
+              <span class="cv-skill-tag">דשבורדים</span>
+            </div>
+          </div>
+          <div class="cv-skills-group">
+            <div class="cv-skills-label">ניהול ואסטרטגיה</div>
+            <div class="cv-skills-row">
+              <span class="cv-skill-tag">ניהול תקציב ענק</span>
+              <span class="cv-skill-tag">תכנון מדיניות</span>
+              <span class="cv-skill-tag">הובלת רפורמות</span>
+              <span class="cv-skill-tag">הקמת מנגנונים</span>
+              <span class="cv-skill-tag">מו"מ מול אגף התקציבים</span>
+            </div>
+          </div>
+          <div class="cv-skills-group">
+            <div class="cv-skills-label">שותפויות ושפות</div>
+            <div class="cv-skills-row">
+              <span class="cv-skill-tag">קואליציות רב-מערכתיות</span>
+              <span class="cv-skill-tag">תיאום בין-משרדי</span>
+              <span class="cv-skill-tag">פילנתרופיה</span>
+              <span class="cv-skill-tag">עברית – שפת אם</span>
+              <span class="cv-skill-tag">אנגלית – שליטה מצוינת</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- המלצות -->
+        <div class="cv-section-block">
+          <div class="cv-section-title">המלצות</div>
+          <div class="cv-rec">
+            <div>"משלב באופן ייחודי חשיבה אסטרטגית מורכבת עם יכולת ביצוע גבוהה. ממליץ עליו בחום רב לכל תפקיד בכיר הדורש הובלת שינויים מערכתיים"</div>
+            <div class="cv-rec-author">ינון אהרוני – מנכ"ל, משרד הרווחה והביטחון החברתי</div>
+          </div>
+          <div class="cv-rec">
+            <div>"אביעד התגלה כשותף אמיתי לגודל השעה, גילה תכונות של מנהיגות, מקצועיות, ולמידה מתמדת. אין לי ספק שהתרומה והשליחות של אביעד למשרד ולאזרחים הוותיקים הם נכס"</div>
+            <div class="cv-rec-author">אבי מוטולה – המשנה למנכ"ל, משרד הרווחה</div>
+          </div>
+        </div>
+
+        <!-- שירות צבאי -->
+        <div class="cv-section-block" style="margin-bottom:0">
+          <div class="cv-section-title">שירות צבאי</div>
+          <p class="cv-summary">2004–2005 | לוחם בגדוד "רותם" בגבעתי, ולוחם מילואים פעיל.</p>
+        </div>
+
+      </div><!-- /cv-body -->
+
+      <!-- DOWNLOAD BAR -->
+      <div class="cv-download-bar">
+        <a href="קורות-חיים-אביעד-יצחקי-2026.docx" download class="btn-dl" style="font-size:0.95rem;padding:13px 28px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          הורד קורות חיים (Word)
+        </a>
+        <button onclick="window.print()" class="btn-print" style="font-size:0.95rem;padding:13px 26px;color:var(--primary);border-color:var(--primary);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          הדפס / שמור כ-PDF
+        </button>
+      </div>
+
+    </div><!-- /cv-page -->
+  </div>
+
+</body>
+</html>
