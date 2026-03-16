@@ -1,14 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 90" width="260" height="90">
-  <rect width="260" height="90" fill="white"/>
-  <!-- Knot/infinity icon approximation -->
-  <g transform="translate(200,45)">
-    <ellipse cx="-12" cy="-10" rx="16" ry="10" fill="none" stroke="#4B5BD6" stroke-width="5" stroke-linecap="round"/>
-    <ellipse cx="8" cy="-10" rx="16" ry="10" fill="none" stroke="#4B5BD6" stroke-width="5" stroke-linecap="round"/>
-    <ellipse cx="-12" cy="10" rx="16" ry="10" fill="none" stroke="#6B7AE8" stroke-width="5" stroke-linecap="round"/>
-    <ellipse cx="8" cy="10" rx="16" ry="10" fill="none" stroke="#6B7AE8" stroke-width="5" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 120">
+  <!-- Text: right-aligned layout -->
+  <text x="220" y="42" font-family="Arial Black, Arial, sans-serif" font-size="29" font-weight="900" fill="#111111" text-anchor="end">משרד הרווחה</text>
+  <text x="220" y="80" font-family="Arial Black, Arial, sans-serif" font-size="29" font-weight="900" fill="#111111" text-anchor="end">והביטחון החברתי</text>
+
+  <!-- Celtic knot: 4 interlocking loops -->
+  <g transform="translate(360, 60)">
+    <defs>
+      <!-- Mask for weaving: top outer crossing — TL over TR -->
+      <mask id="m-top">
+        <rect x="-60" y="-60" width="120" height="120" fill="white"/>
+        <rect x="-7" y="-44" width="14" height="12" fill="black"/>
+      </mask>
+      <!-- Mask for weaving: right outer crossing — TR over BR -->
+      <mask id="m-right">
+        <rect x="-60" y="-60" width="120" height="120" fill="white"/>
+        <rect x="32" y="-7" width="12" height="14" fill="black"/>
+      </mask>
+      <!-- Mask for weaving: bottom outer crossing — BR over BL -->
+      <mask id="m-bottom">
+        <rect x="-60" y="-60" width="120" height="120" fill="white"/>
+        <rect x="-7" y="32" width="14" height="12" fill="black"/>
+      </mask>
+      <!-- Mask for weaving: left outer crossing — BL over TL -->
+      <mask id="m-left">
+        <rect x="-60" y="-60" width="120" height="120" fill="white"/>
+        <rect x="-44" y="-7" width="12" height="14" fill="black"/>
+      </mask>
+    </defs>
+
+    <!-- Layer 1: BL and BR circles (bottom layer at outer crossings) -->
+    <circle cx="-16" cy="16" r="25" fill="none" stroke="#2B9ED4" stroke-width="9" mask="url(#m-left)"/>
+    <circle cx="16" cy="16" r="25" fill="none" stroke="#2B9ED4" stroke-width="9" mask="url(#m-bottom)"/>
+
+    <!-- Layer 2: TL and TR circles -->
+    <circle cx="-16" cy="-16" r="25" fill="none" stroke="#2B9ED4" stroke-width="9" mask="url(#m-top)"/>
+    <circle cx="16" cy="-16" r="25" fill="none" stroke="#2B9ED4" stroke-width="9" mask="url(#m-right)"/>
+
+    <!-- Layer 3: redraw outer crossing "over" arcs on top -->
+    <!-- Top: TL arc at top crossing -->
+    <clipPath id="cp-top"><rect x="-8" y="-46" width="16" height="13"/></clipPath>
+    <circle cx="-16" cy="-16" r="25" fill="none" stroke="#2B9ED4" stroke-width="9" clip-path="url(#cp-top)"/>
+    <!-- Right: TR arc at right crossing -->
+    <clipPath id="cp-right"><rect x="31" y="-8" width="13" height="16"/></clipPath>
+    <circle cx="16" cy="-16" r="25" fill="none" stroke="#2B9ED4" stroke-width="9" clip-path="url(#cp-right)"/>
+    <!-- Bottom: BR arc at bottom crossing -->
+    <clipPath id="cp-bottom"><rect x="-8" y="33" width="16" height="13"/></clipPath>
+    <circle cx="16" cy="16" r="25" fill="none" stroke="#2B9ED4" stroke-width="9" clip-path="url(#cp-bottom)"/>
+    <!-- Left: BL arc at left crossing -->
+    <clipPath id="cp-left"><rect x="-46" y="-8" width="13" height="16"/></clipPath>
+    <circle cx="-16" cy="16" r="25" fill="none" stroke="#2B9ED4" stroke-width="9" clip-path="url(#cp-left)"/>
   </g>
-  <!-- Text -->
-  <text x="10" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#1a1a2e" text-anchor="start">משרד הרווחה</text>
-  <text x="10" y="48" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#1a1a2e" text-anchor="start">והביטחון החברתי</text>
-  <text x="10" y="64" font-family="Arial, sans-serif" font-size="10" fill="#4B5BD6" text-anchor="start">חוסן חברתי לישראל</text>
 </svg>

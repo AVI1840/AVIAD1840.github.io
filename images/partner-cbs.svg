@@ -1,8 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
-  <rect width="200" height="80" fill="white"/>
-  <text x="100" y="24" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#3a3a8c" text-anchor="middle">הלשכה המרכזית</text>
-  <text x="100" y="39" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#3a3a8c" text-anchor="middle">לסטטיסטיקה</text>
-  <line x1="30" y1="50" x2="170" y2="50" stroke="#5a5ab0" stroke-width="1.5"/>
-  <text x="100" y="63" font-family="Arial, sans-serif" font-size="9.5" fill="#5a5ab0" text-anchor="middle">Central Bureau of Statistics</text>
-  <text x="100" y="75" font-family="Arial, sans-serif" font-size="8" fill="#888" text-anchor="middle">CBS Israel</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160">
+  <!-- CBS geometric mark: angular shapes in 3 blues -->
+  <g transform="translate(120, 72)">
+    <!-- Dark navy outer left angular piece -->
+    <polygon points="-48,50 -48,-10 -28,-50 -8,-50 -28,-10 -8,50" fill="#003F8A"/>
+    <!-- Medium blue outer right angular piece -->
+    <polygon points="8,-50 48,-50 48,50 8,50 28,10 28,-10" fill="#003F8A"/>
+    <!-- Light sky-blue center diamond/arrow -->
+    <polygon points="-8,-50 8,-50 28,-10 28,10 8,50 -8,50 -28,10 -28,-10" fill="#2B9ED4"/>
+    <!-- Inner lighter highlight -->
+    <polygon points="-8,-28 8,-28 18,-8 18,8 8,28 -8,28 -18,8 -18,-8" fill="#5BBFE8"/>
+    <!-- Dark center diamond -->
+    <polygon points="-5,-18 5,-18 12,-5 12,5 5,18 -5,18 -12,5 -12,-5" fill="#003F8A"/>
+  </g>
+  <!-- Text -->
+  <text x="120" y="142" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#003F8A" text-anchor="middle">הלשכה המרכזית לסטטיסטיקה</text>
 </svg>
