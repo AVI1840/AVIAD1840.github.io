@@ -20,5 +20,5 @@ REM Push
 git push origin main
 
 echo.
-echo Done! Site will update at https://aviad1840.github.io in ~1 minute.
+echo Done! Site will update at https://avi1840.github.io/AVIAD1840.github.io in ~1 minute.
 pause
