@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>אביעד יצחקי | הובלת שינוי, אסטרטגיה ו-AI בשירות הציבורי</title>
-  <meta name="description" content="מנהל בכיר המתמחה בהובלת טרנספורמציה ממשלתית, אסטרטגיה, תקציבים ובינה מלאכותית.">
+  <title>אביעד יצחקי | מנהיג טרנספורמציה ממשלתית ו-AI</title>
+  <meta name="description" content="מנהיג בכיר בטרנספורמציה ממשלתית — ניהול תקציבי ציבורי של 700M ₪, הובלת AI ארגוני בביטוח לאומי, מייסד פורום ברק הבין-משרדי.">
   <meta name="keywords" content="אביעד יצחקי, AI ממשלתי, טרנספורמציה ממשלתית, הובלת רפורמות, אסטרטגיה ממשלתית, בינה מלאכותית בשירות הציבורי">
-  <meta property="og:title" content="אביעד יצחקי | הובלת שינוי, אסטרטגיה ו-AI בשירות הציבורי">
-  <meta property="og:description" content="מנהל בכיר המתמחה בהובלת טרנספורמציה ממשלתית, אסטרטגיה, תקציבים ובינה מלאכותית.">
+  <meta property="og:title" content="אביעד יצחקי | מנהיג טרנספורמציה ממשלתית ו-AI">
+  <meta property="og:description" content="מנהיג בכיר בטרנספורמציה ממשלתית — ניהול תקציבי ציבורי של 700M ₪, הובלת AI ארגוני בביטוח לאומי, מייסד פורום ברק הבין-משרדי.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="he_IL">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -231,7 +231,7 @@
     .live-category { margin-bottom: 48px; }
     .live-category h3 { font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--bg-light); display: flex; align-items: center; gap: 8px; }
     .live-category h3 svg { width: 22px; height: 22px; flex-shrink: 0; }
-    .live-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .live-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
     .live-card { background: var(--bg-light); border-radius: var(--radius-md); padding: 24px; transition: var(--transition); border: 1px solid #e5e7eb; border-right: 3px solid var(--secondary); }
     .live-card:hover { border-color: var(--secondary); border-right-color: var(--cta); box-shadow: var(--shadow-md); transform: translateY(-3px); }
     .live-card-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 10px; gap: 12px; }
@@ -245,6 +245,30 @@
     .live-card p { font-size: 0.85rem; color: var(--text-light); line-height: 1.6; margin-bottom: 12px; }
     .live-card-link { display: inline-flex; align-items: center; gap: 4px; font-size: 0.82rem; color: var(--secondary); font-weight: 600; transition: var(--transition); }
     .live-card-link:hover { color: var(--primary); }
+
+    /* BTL PROJECTS BANNER */
+    .btl-projects-banner { background: linear-gradient(135deg, var(--primary) 0%, #1a3a6e 100%); border-radius: var(--radius-lg); padding: 40px 48px; margin-top: 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px; position: relative; overflow: hidden; }
+    .btl-projects-banner::before { content: ''; position: absolute; top: -60px; left: -60px; width: 240px; height: 240px; background: rgba(255,255,255,0.04); border-radius: 50%; pointer-events: none; }
+    .btl-projects-banner::after { content: ''; position: absolute; bottom: -80px; right: 10%; width: 320px; height: 320px; background: rgba(255,255,255,0.03); border-radius: 50%; pointer-events: none; }
+    .btl-banner-content { flex: 1; }
+    .btl-banner-label { display: inline-flex; align-items: center; gap: 8px; font-size: 0.75rem; font-weight: 700; color: var(--secondary); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 10px; }
+    .btl-banner-label svg { width: 14px; height: 14px; }
+    .btl-banner-title { font-size: 1.6rem; font-weight: 800; color: #fff; margin-bottom: 8px; line-height: 1.3; }
+    .btl-banner-desc { font-size: 0.9rem; color: rgba(255,255,255,0.72); margin-bottom: 24px; line-height: 1.6; }
+    .btl-banner-stats { display: flex; gap: 28px; flex-wrap: wrap; }
+    .btl-stat { display: flex; flex-direction: column; gap: 2px; }
+    .btl-stat-num { font-size: 1.3rem; font-weight: 800; color: #fff; line-height: 1; }
+    .btl-stat-label { font-size: 0.7rem; color: rgba(255,255,255,0.55); font-weight: 500; }
+    .btl-banner-cta { flex-shrink: 0; display: inline-flex; align-items: center; gap: 10px; background: var(--secondary); color: var(--primary); font-weight: 700; font-size: 0.95rem; padding: 14px 28px; border-radius: var(--radius-md); transition: var(--transition); white-space: nowrap; position: relative; z-index: 1; }
+    .btl-banner-cta:hover { background: #fff; transform: translateX(-4px); }
+    .btl-banner-cta svg { width: 18px; height: 18px; transition: transform 0.2s; }
+    .btl-banner-cta:hover svg { transform: translateX(-4px); }
+    @media (max-width: 700px) {
+      .btl-projects-banner { flex-direction: column; padding: 32px 24px; text-align: center; }
+      .btl-banner-stats { justify-content: center; gap: 20px; }
+      .btl-banner-cta { width: 100%; justify-content: center; }
+      .btl-banner-title { font-size: 1.3rem; }
+    }
 
     /* TIMELINE - COMPACT */
     .timeline-section { background: var(--bg-light); padding: 80px 0; }
@@ -371,6 +395,20 @@
       section { padding: 30px 0; }
       .hero { min-height: auto; }
     }
+
+    /* SMALL MOBILE (≤600px) */
+    @media (max-width: 600px) {
+      section { padding: 64px 0; }
+      .section-title { font-size: 1.85rem; }
+      .section-subtitle { font-size: 1rem; margin-bottom: 40px; }
+      .vision h2 { font-size: 1.85rem !important; }
+      .hero-title { font-size: 1.7rem; }
+      .btn { font-size: 0.9rem; padding: 12px 22px; }
+      .hero-buttons { flex-direction: column; align-items: stretch; }
+      .hero-buttons .btn, .hero-buttons .btn-linkedin { text-align: center; justify-content: center; }
+      .container { padding: 0 16px; }
+      .contact-wrapper { gap: 36px; }
+    }
   </style>
 </head>
 <body>
@@ -411,6 +449,7 @@
     <a href="#live-projects">פעילות נוכחית</a>
     <a href="#timeline">ניסיון</a>
     <a href="#education">השכלה</a>
+    <a href="#cv">קורות חיים</a>
     <a href="#vision">האתגר הבא</a>
     <a href="#social-proof">שותפים</a>
     <a href="#contact">צור קשר</a>
@@ -425,9 +464,9 @@
         <div class="hero-content">
           <div class="hero-name">אביעד יצחקי</div>
           <h1 class="hero-title">הובלת שינוי, אסטרטגיה ו-AI בשירות הציבורי</h1>
-          <p class="hero-tagline">תרגום חזון אסטרטגי לכלים דיגיטליים שמשפרים חיים של מיליוני אזרחים</p>
+          <p class="hero-tagline">מנהיג טרנספורמציה ממשלתית בכיר — תקציבים ציבוריים, AI ארגוני ורפורמות בקנה מידה לאומי</p>
           <div class="hero-challenge">
-            ממשלות מתקשות להטמיע שינוי אמיתי. מומחיות ייחודית בהפיכת חזון למציאות &mdash; עם אסטרטגיה, דאטה, AI, ושותפויות שעובדות.
+            ניהול תקציבי ציבורי של כ-700 מיליון ₪. הובלת יוזמות AI ארגוניות בביטוח לאומי &mdash; הארגון הסוציאלי הגדול בישראל. מייסד פורום ברק &mdash; מנגנון בין-משרדי לאומי עם 12 משרדי ממשלה.
           </div>
           <div class="hero-blocks">
             <div class="hero-block">
@@ -454,9 +493,13 @@
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               LinkedIn
             </a>
-            <a href="קורות-חיים-אביעד-יצחקי-2026.docx" download class="btn btn-secondary" title="קורות חיים כלליים">
+            <a href="קורות-חיים-אביעד-יצחקי-2026.docx" download class="btn btn-secondary" title="קורות חיים">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-              קו&quot;ח כללי
+              קו&quot;ח
+            </a>
+            <a href="https://avi1840.github.io/btl-projects-2026/" target="_blank" rel="noopener" class="btn btn-secondary" title="פרויקטי מינהל גמלאות 2026">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              פרויקטים
             </a>
           </div>
         </div>
@@ -478,8 +521,8 @@
             <span class="stat-tag tag-budget">תקציב</span>
           </div>
           <div class="stat-item fade-up">
-            <div class="stat-number"><span class="counter" data-target="11">0</span></div>
-            <div class="stat-label">פרויקטי AI ודיגיטל פעילים במקביל</div>
+            <div class="stat-number"><span class="counter" data-target="13">0</span></div>
+            <div class="stat-label">פרויקטי AI ודיגיטל פעילים במינהל גמלאות</div>
             <span class="stat-tag tag-ai">AI</span>
           </div>
           <div class="stat-item fade-up">
@@ -488,8 +531,8 @@
             <span class="stat-tag tag-reform">רפורמות</span>
           </div>
           <div class="stat-item fade-up">
-            <div class="stat-number" dir="ltr" style="justify-content: center;"><span class="counter" data-target="200">0</span><span class="stat-suffix">,000</span></div>
-            <div class="stat-label">זכאי סיעוד שהכלים מכוונים אליהם</div>
+            <div class="stat-number" dir="ltr" style="justify-content: center;"><span class="counter" data-target="220">0</span><span class="stat-suffix">,000</span></div>
+            <div class="stat-label">מקבלי סיעוד שהכלים מכוונים אליהם</div>
             <span class="stat-tag tag-ai">AI</span>
           </div>
           <div class="stat-item fade-up">
@@ -550,7 +593,7 @@
             <p>הובלת הטמעת AI ודיגיטל בארגונים ממשלתיים. פיתוח כלים שמייצרים תוצאות</p>
             <div class="block-proofs">
               <ul>
-                <li>11 פרויקטי AI בביטוח לאומי</li>
+                <li>13 פרויקטי AI בביטוח לאומי</li>
                 <li>מערכת "אמון"</li>
                 <li>דשבורד 280 רשויות</li>
                 <li>בוט חוסך 30-45 דק'</li>
@@ -718,7 +761,7 @@
         <h3>טרנספורמציית AI בביטוח לאומי</h3>
         <div class="modal-section"><h4>האתגר</h4><p>ארגון ענק עם 6,000 עובדים ותהליכים מיושנים. פערי יעילות ושירות.</p></div>
         <div class="modal-section"><h4>הפתרון</h4><p>הטמעת AI עסקי: הכשרת 30 מנהלים בתוכנית 4x4 שבנו 40 בוטים, פיתוח 11 כלים פעילים, בניית תשתית חדשנות ארגונית.</p></div>
-        <div class="modal-section"><h4>התוצאה</h4><p>11 פרויקטים פעילים במקביל. תשתית חדשנות ארגונית. כנס AI ממשלתי. פורטל AI ל-1,500+ עובדים.</p></div>
+        <div class="modal-section"><h4>התוצאה</h4><p>13 פרויקטים פעילים במקביל. תשתית חדשנות ארגונית. כנס AI ממשלתי. פורטל AI ל-1,500+ עובדים.</p></div>
       </div>
     </div>
     <div class="modal-overlay" id="modal-4">
@@ -758,40 +801,117 @@
         <h2 class="section-title fade-up">פרויקטי AI מובילים</h2>
         <p class="section-subtitle fade-up">הובלת הטרנספורמציה של AI עסקי בביטוח לאומי</p>
 
-        <div class="live-grid fade-up" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1000px;margin:0 auto;">
+        <!-- כלים דיגיטליים -->
+        <div class="live-category fade-up">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            כלים דיגיטליים — חיים ופעילים
+          </h3>
+          <div class="live-grid fade-up">
 
-          <div class="live-card">
-            <div class="live-card-header"><h4>מיצוי זכויות 360 – ONE GOV</h4><span class="status-badge status-pilot">POC + הסכמה</span></div>
-            <p>הנגשת זכויות בין-מערכתיות לאזרח בשת"פ עם מערך הדיגיטל הלאומי. הסכמה לפיתוח משותף.</p>
+            <div class="live-card">
+              <div class="live-card-header"><h4>דשבורד פערי גמלאות</h4><span class="status-badge status-active">חי באוויר</span></div>
+              <p>257 רשויות, 9 סוגי גמלאות — מפה אינטראקטיבית לאיתור פערים עירוניים בזמן אמת.</p>
+              <a href="https://aviad1840.github.io/dashboard-gamlaut/" target="_blank" rel="noopener" class="live-card-link">צפה בדשבורד &#8592;</a>
+            </div>
+
+            <div class="live-card">
+              <div class="live-card-header"><h4>מיצוי זכויות 360</h4><span class="status-badge status-active">חי באוויר</span></div>
+              <p>כלי AI פרואקטיבי לזיהוי זכויות לא ממומשות — 7 תרחישים, 98 הטבות, תוצאה תוך 30 שניות.</p>
+              <a href="https://avi1840.github.io/mitzui-360/" target="_blank" rel="noopener" class="live-card-link">נסה את הכלי &#8592;</a>
+            </div>
+
+            <div class="live-card">
+              <div class="live-card-header"><h4>ועדות רפואיות — צ׳קליסט</h4><span class="status-badge status-active">חי באוויר</span></div>
+              <p>צ׳קליסט מסמכים מותאם אישית לפי אבחנה ותחום — 140+ אבחנות, 7 תחומים.</p>
+              <a href="https://avi1840.github.io/vaadot-refuiyot/" target="_blank" rel="noopener" class="live-card-link">נסה את הכלי &#8592;</a>
+            </div>
+
+            <div class="live-card">
+              <div class="live-card-header"><h4>ארנק זכויות — מצפן הטבות</h4><span class="status-badge status-active">חי באוויר</span></div>
+              <p>רשימת זכויות אישית מותאמת לכל אזרח לפי הקצבאות שמקבל — 91 הטבות, 8 קטגוריות.</p>
+              <a href="https://avi1840.github.io/arnak-zchuyot/" target="_blank" rel="noopener" class="live-card-link">נסה את הכלי &#8592;</a>
+            </div>
+
+            <div class="live-card">
+              <div class="live-card-header"><h4>מחשבון כפל גמלאות — סעיף 320</h4><span class="status-badge status-active">חי באוויר</span></div>
+              <p>חישוב אוטומטי של זכאות לכפל גמלאות — שאירים מול נכות כללית. כיסוי מלא, הסבר מפורט.</p>
+              <a href="https://avi1840.github.io/machshevon-kefel--ZOSH/" target="_blank" rel="noopener" class="live-card-link">נסה את הכלי &#8592;</a>
+            </div>
+
+            <div class="live-card">
+              <div class="live-card-header"><h4>הנגשת שירותי סיעוד</h4><span class="status-badge status-active">חי באוויר</span></div>
+              <p>ממשק לסיוע לאזרח בהבנת זכאות ובחירת מסלול שירות — 220K מקבלי סיעוד, נגישות תקן 5568.</p>
+              <a href="https://avi1840.github.io/nursing-helper/" target="_blank" rel="noopener" class="live-card-link">נסה את הכלי &#8592;</a>
+            </div>
+
           </div>
-
-          <div class="live-card">
-            <div class="live-card-header"><h4>דשבורד פערי גמלאות</h4><span class="status-badge status-active">פעיל</span></div>
-            <p>280 רשויות, 9 סוגי גמלאות, מפה אינטראקטיבית לאיתור פערים עירוניים.</p>
-            <a href="https://aviad1840.github.io/dashboard-gamlaut/" target="_blank" rel="noopener" class="live-card-link">צפה בדשבורד &#8592;</a>
-          </div>
-
-          <div class="live-card">
-            <div class="live-card-header"><h4>תוכנית 4×4</h4><span class="status-badge status-active">שוטף ומתרחב</span></div>
-            <p>הכשרת 30 מאיצי AI בכל האגפים. 40 בוטים פעילים. כנס AI ממשלתי בין-משרדי.</p>
-          </div>
-
-          <div class="live-card">
-            <div class="live-card-header"><h4>המקפצה</h4><span class="status-badge status-dev">לאישור ועדת היגוי</span></div>
-            <p>טרנספורמציה בשוק התעסוקה בשת"פ רב-מערכתי. 400,000+ אזרחים בסיכון תעסוקתי.</p>
-          </div>
-
-          <div class="live-card">
-            <div class="live-card-header"><h4>בוט סיכום תביעת סיעוד</h4><span class="status-badge status-pilot">MVP מוכן</span></div>
-            <p>מענה מהיר ויעיל ל-450,000 תביעות בשנה. חוסך ~15 דקות עבודה לתביעה ועשרות ימי המתנה למבוטח.</p>
-          </div>
-
-          <div class="live-card">
-            <div class="live-card-header"><h4>פורטל ידע 2.0 + בוטים</h4><span class="status-badge status-done">שלב א' הושלם</span></div>
-            <p>ניהול והנגשת ידע ל-4,000 פקידים במטה ובשטח. 123 חוזרים. בסיס ידע ארגוני מלא.</p>
-          </div>
-
         </div>
+
+        <!-- מיזמים אסטרטגיים -->
+        <div class="live-category fade-up">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            מיזמים אסטרטגיים ובפיתוח
+          </h3>
+          <div class="live-grid fade-up">
+
+            <div class="live-card">
+              <div class="live-card-header"><h4>תוכנית 4×4</h4><span class="status-badge status-active">שוטף ומתרחב</span></div>
+              <p>הכשרת 30 מאיצי AI בכל האגפים. 40 בוטים פעילים. כנס AI ממשלתי בין-משרדי.</p>
+            </div>
+
+            <div class="live-card">
+              <div class="live-card-header"><h4>עוזר אישי חכם לאזרח</h4><span class="status-badge status-pilot">MVP פעיל</span></div>
+              <p>ליווי אלמנות וזקנים בתחילת ירידה תפקודית דרך WhatsApp. תקציב 999K &#8362; מאושר. פיילוט 500 אזרחים.</p>
+            </div>
+
+            <div class="live-card">
+              <div class="live-card-header"><h4>סל מותאם אישית בסיעוד</h4><span class="status-badge status-pilot">פיילוט פעיל</span></div>
+              <p>מעבר מסל אחיד לסל מותאם — מרקטפלייס שירותים וארנק דיגיטלי. 286 לקוחות בירושלים.</p>
+              <a href="https://avi1840.github.io/SAL-ISHI-SIUD/" target="_blank" rel="noopener" class="live-card-link">אב טיפוס &#8592;</a>
+            </div>
+
+            <div class="live-card">
+              <div class="live-card-header"><h4>המקפצה</h4><span class="status-badge status-dev">לאישור ועדת היגוי</span></div>
+              <p>אסטרטגיה לאומית לתעסוקת אוכלוסיות בסיכון בעידן AI — 3 מסלולים, 700K נשים בסיכון, תקציב 9.2M &#8362;.</p>
+            </div>
+
+            <div class="live-card">
+              <div class="live-card-header"><h4>בוט סיכום תביעת סיעוד</h4><span class="status-badge status-pilot">POC עובד</span></div>
+              <p>סיכום אוטומטי של תיקי תביעה מ-44 מסמכים לתמונה ברורה. חוסך 30–45 דקות לתיק, עשרות ימי המתנה למבוטח.</p>
+            </div>
+
+            <div class="live-card">
+              <div class="live-card-header"><h4>פורטל גמלאות 2.0 + בוטים</h4><span class="status-badge status-dev">שלב ב׳ — בוטים</span></div>
+              <p>1,500+ דפי פורטל, 123 כלים מוטמעים. בוטים חכמים וחיפוש AI ל-4,000 פקידים. דירוג UX: 9.5/10.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- BTL Projects Banner -->
+        <div class="btl-projects-banner fade-up">
+          <div class="btl-banner-content">
+            <div class="btl-banner-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              2026 — פרויקטי מינהל גמלאות
+            </div>
+            <h3 class="btl-banner-title">13 פרויקטים חיים בביטוח לאומי</h3>
+            <p class="btl-banner-desc">6 כלים דיגיטליים פתוחים לציבור · 220K מקבלי סיעוד · 4,000 פקידים · תקציבים מאושרים</p>
+            <div class="btl-banner-stats">
+              <div class="btl-stat"><span class="btl-stat-num">6</span><span class="btl-stat-label">כלים חיים</span></div>
+              <div class="btl-stat"><span class="btl-stat-num">13</span><span class="btl-stat-label">פרויקטים פעילים</span></div>
+              <div class="btl-stat"><span class="btl-stat-num">220K</span><span class="btl-stat-label">אזרחים מטופלים</span></div>
+              <div class="btl-stat"><span class="btl-stat-num">9.2M ₪</span><span class="btl-stat-label">תקציב מאושר</span></div>
+            </div>
+          </div>
+          <a href="https://avi1840.github.io/btl-projects-2026/" target="_blank" rel="noopener" class="btl-banner-cta">
+            <span>לדף הפרויקטים המלא</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
       </div>
     </section>
 
@@ -893,16 +1013,41 @@
           </div>
         </div>
         <div class="tech-stack fade-up">
-          <h3>סטאק טכנולוגי</h3>
-          <div class="tech-badges">
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">TypeScript</span>
-            <span class="tech-badge">Vite</span>
-            <span class="tech-badge">Tailwind CSS</span>
-            <span class="tech-badge">Recharts</span>
-            <span class="tech-badge">Node.js</span>
-            <span class="tech-badge">AI Prompting</span>
-            <span class="tech-badge">GPT / Claude / Gemini</span>
+          <h3>סטאק טכנולוגי ו-AI</h3>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div>
+              <div style="font-size:0.75rem;font-weight:700;color:var(--text-muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em;">פלטפורמות AI</div>
+              <div class="tech-badges">
+                <span class="tech-badge">ChatGPT Enterprise</span>
+                <span class="tech-badge">Claude / Claude Code</span>
+                <span class="tech-badge">Microsoft Copilot</span>
+                <span class="tech-badge">Gemini for Workspace</span>
+                <span class="tech-badge">Perplexity AI</span>
+                <span class="tech-badge">NotebookLM</span>
+              </div>
+            </div>
+            <div>
+              <div style="font-size:0.75rem;font-weight:700;color:var(--text-muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em;">פיתוח כלים</div>
+              <div class="tech-badges">
+                <span class="tech-badge">React + TypeScript</span>
+                <span class="tech-badge">Vite</span>
+                <span class="tech-badge">Tailwind CSS</span>
+                <span class="tech-badge">Recharts</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">GitHub Pages</span>
+              </div>
+            </div>
+            <div>
+              <div style="font-size:0.75rem;font-weight:700;color:var(--text-muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em;">מתודולוגיה</div>
+              <div class="tech-badges">
+                <span class="tech-badge">Prompt Engineering</span>
+                <span class="tech-badge">RAG</span>
+                <span class="tech-badge">Vibe Coding</span>
+                <span class="tech-badge">AI Product Strategy</span>
+                <span class="tech-badge">Data-Driven Policy</span>
+                <span class="tech-badge">Power BI</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -931,11 +1076,11 @@
             <span>ביטוח לאומי</span>
           </div>
           <div class="logo-item">
-            <img src="images/partner-welfare.png" alt="משרד הרווחה">
+            <img src="images/partner-welfare.svg" alt="משרד הרווחה">
             <span>משרד הרווחה</span>
           </div>
           <div class="logo-item">
-            <img src="images/partner-health.png" alt="משרד הבריאות">
+            <img src="images/partner-health.svg" alt="משרד הבריאות">
             <span>משרד הבריאות</span>
           </div>
           <div class="logo-item">
@@ -943,7 +1088,7 @@
             <span>משרד האוצר</span>
           </div>
           <div class="logo-item">
-            <img src="images/partner-pmo.png" alt="משרד ראש הממשלה">
+            <img src="images/partner-pmo.svg" alt="משרד ראש הממשלה">
             <span>משרד רוה"מ</span>
           </div>
           <div class="logo-item">
@@ -963,7 +1108,7 @@
             <span>רשות החדשנות</span>
           </div>
           <div class="logo-item">
-            <img src="images/partner-cbs.png" alt="הלשכה המרכזית לסטטיסטיקה">
+            <img src="images/partner-cbs.svg" alt="הלשכה המרכזית לסטטיסטיקה">
             <span>למ"ס</span>
           </div>
           <div class="logo-item">
@@ -1014,7 +1159,7 @@
           </div>
           <div class="cv-preview-stats">
             <div class="cv-preview-stat"><div class="cv-preview-num">700M ₪</div><div class="cv-preview-label">תקציב שנוהל</div></div>
-            <div class="cv-preview-stat"><div class="cv-preview-num">11</div><div class="cv-preview-label">פרויקטי AI פעילים</div></div>
+            <div class="cv-preview-stat"><div class="cv-preview-num">13</div><div class="cv-preview-label">פרויקטי AI פעילים</div></div>
             <div class="cv-preview-stat"><div class="cv-preview-num">98%</div><div class="cv-preview-label">רשויות ברפורמת הביזור</div></div>
             <div class="cv-preview-stat"><div class="cv-preview-num">12</div><div class="cv-preview-label">משרדי ממשלה</div></div>
           </div>
@@ -1088,7 +1233,7 @@
           LinkedIn – אביעד יצחקי
         </a>
       </div>
-      <p>&copy; 2025 אביעד יצחקי. כל הזכויות שמורות.</p>
+      <p>&copy; 2026 אביעד יצחקי. כל הזכויות שמורות.</p>
     </div>
   </footer>
 
