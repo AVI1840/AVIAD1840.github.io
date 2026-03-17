@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- PROJECTS GATE: must run before render to avoid flash -->
+  <script>if(location.search.indexOf('v=full')===-1){document.documentElement.className+=' no-projects';}</script>
   <title>אביעד יצחקי | מנהיג טרנספורמציה ממשלתית ו-AI</title>
   <meta name="description" content="מנהיג בכיר בטרנספורמציה ממשלתית — ניהול תקציבי ציבורי של 700M ₪, הובלת AI ארגוני בביטוח לאומי, מייסד פורום ברק הבין-משרדי.">
   <meta name="keywords" content="אביעד יצחקי, AI ממשלתי, טרנספורמציה ממשלתית, הובלת רפורמות, אסטרטגיה ממשלתית, בינה מלאכותית בשירות הציבורי">
@@ -271,7 +273,7 @@
     }
 
     /* PROJECTS GATE - hidden by default, shown only with ?v=full */
-    body.no-projects .projects-gate { display: none !important; }
+    html.no-projects .projects-gate { display: none !important; }
 
     /* TIMELINE - COMPACT */
     .timeline-section { background: var(--bg-light); padding: 80px 0; }
@@ -1395,15 +1397,6 @@
     })();
   </script>
 
-  <!-- PROJECTS GATE: show project sections only when ?v=full is in URL -->
-  <script>
-    (function() {
-      var isFullVersion = new URLSearchParams(window.location.search).get('v') === 'full';
-      if (!isFullVersion) {
-        document.body.classList.add('no-projects');
-      }
-    })();
-  </script>
 
 </body>
 </html>
